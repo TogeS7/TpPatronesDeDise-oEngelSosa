@@ -1,0 +1,19 @@
+@startuml
+
+class Configuracion {
+    - instancia : Configuracion
+    - nombreAplicacion : String
+    - idioma : String
+
+    - Configuracion()
+    + getInstancia() : Configuracion
+    + mostrarConfiguracion() : void
+}
+
+class Main {
+    + main(args : String[]) : void
+}
+
+Main --> Configuracion : utiliza
+
+@enduml
