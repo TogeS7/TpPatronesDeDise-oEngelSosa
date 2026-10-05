@@ -1,0 +1,15 @@
+@startuml
+class HomeTheaterFacade {
+  - proyector: Proyector
+  - dvd: ReproductorDVD
+  + verPelicula(titulo: String): void
+}
+class Proyector {
+  + encender(): void
+}
+class ReproductorDVD {
+  + reproducir(titulo: String): void
+}
+HomeTheaterFacade --> Proyector
+HomeTheaterFacade --> ReproductorDVD
+@enduml

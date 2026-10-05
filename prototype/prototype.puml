@@ -1,0 +1,13 @@
+@startuml
+interface Enemigo {
+  + clonar(): Enemigo
+  + mostrar(): void
+}
+class Orco {
+  - vida: int
+  - arma: String
+  + clonar(): Enemigo
+  + mostrar(): void
+}
+Orco ..|> Enemigo
+@enduml

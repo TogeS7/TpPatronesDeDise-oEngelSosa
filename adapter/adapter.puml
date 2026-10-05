@@ -1,0 +1,15 @@
+@startuml
+interface Motor {
+  + encender(): void
+}
+class MotorElectrico {
+  + conectarBateria(): void
+  + activar(): void
+}
+class AdaptadorMotorElectrico {
+  - motorElectrico: MotorElectrico
+  + encender(): void
+}
+AdaptadorMotorElectrico ..|> Motor
+AdaptadorMotorElectrico --> MotorElectrico
+@enduml
